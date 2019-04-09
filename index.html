@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html lang="pt-br">
+<!--
+  CORES DA LOGO
+
+  #FF6F03 //Alaranjada
+  #004B91 //Azul
+  #171717 //Preto
+  #F7F7F7 //Branco
+
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Exemplo, Teste 1 de login">
+    <meta name="author" content="Marcelo Cardoso">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Boostrap Principal CSS via CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Jquery CDN, Para uso do Modal de CADASTRO-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- CSS customizados para essa página de LOGIN -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Logo do Sistema -->
+    <link rel="icon" href="img/logo.png">
+
+    <title>Login, Usando Bootstrap.</title>
+
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin">
+      <img class="mb-4" src="img/logo.png" alt="" width="150" >
+      <h1 class="h3 mb-3 font-weight-normal">Entre na sua conta </h1>
+      <label for="inputEmail" class="sr-only">Endereço de email</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+      <label for="inputPassword" class="sr-only">Senha</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Lembrar de mim
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      Ainda não tem uma conta? <a data-toggle="modal" href="#myModal" >Cadastre-se</a>
+      
+      <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+    </form>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img src="img/logobranca.png" alt="" width="150">
+          <legend style="color:#f7f7f7">CADASTRO</legend>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form" action="controller/usuarioController.php" method="POST">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nome</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Insira seu nome" name="txtNome">
+            </div>
+            <div class="form-group">
+              <label for="inputEmail"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Insira seu email" required autofocus name="txtEmail">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>
+              <input type="password" class="form-control" id="psw" placeholder="Insira sua senha" name="txtSenha">
+            </div>
+            <div class="form-group">     
+             <label for="inputConfirm" class="control-label"><span class="glyphicon glyphicon-eye-open"></span> Confirme a Senha</label>      
+             <input type="password" class="form-control" id="inputConfirm" placeholder="Confirme sua Senha..." name="confirmacaoSenha">    
+            </div>
+            <span class="glyphicon glyphicon-send"><input type="submit" class="btn btn-lg btn-primary btn-block" value="Envia"></span>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button><!-- BOTÃO DE FECHAR MODAL -->
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  </body>
+</html>
